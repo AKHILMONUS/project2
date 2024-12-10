@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Email</title>
+</head>
+<body>
+<form method="post" action="{% url 'send_emails' %}">
+    {% csrf_token %}
+    <button type="submit">Send Email</button>
+
+<ul>
+    {% for i in key1 %}
+        <li>
+            {{ i.Name }}
+            {{ i.Amount }}
+            {{ i.Email }}
+
+        </li>
+    {% endfor %}
+
+
+
+</ul>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<rss version="2.0">
+    <channel>
+        <title>Latest Study Table Entries</title>
+        <link>{{ request.build_absolute_uri }}</link>
+        <description>Latest entries from the Study Table.</description>
+
+        {% for item in object_list %}
+            <item>
+                <title>{{ item.Firstname }} - {{ item.Age }} years</title>
+                <description>Email: {{ item.Email }}, Mobile: {{ item.Mob }}</description>
+            </item>
+        {% endfor %}
+    </channel>
+</rss>
+
+</body>
+</html>

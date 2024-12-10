@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+        background-color: aqua;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            text-center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <form action="" method="POST">
+            {% csrf_token  %}
+             {{datakey1.as_p}}
+            <input type="submit" value="Register">
+        </form>
+    </div>
+<br>
+
+<a href="path3">Send Email</a>
+
+</body>
+</html>

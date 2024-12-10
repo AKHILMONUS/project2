@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defaulters</title>
+</head>
+<body>
+<form method="post" action="{% url 'select_data' %}">
+    {% csrf_token %}
+    <button type="submit">Send Email</button>
+
+<ul>
+    {% for i in key1 %}
+        <li>
+            {{ i.Name }}
+            {{ i.Amount }}
+            {{ i.Email }}
+
+        </li>
+    {% endfor %}
+</body>
+</html>
